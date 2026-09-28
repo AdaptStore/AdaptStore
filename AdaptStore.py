@@ -107,3 +107,21 @@ def menuEstoque():
         quantidade = -quantidade
 
     atualizarEstoque(catalogo_produtos, codigo, quantidade)
+
+def listarPorCategoria(catalogo, categoria_escolhida):
+    encontrados = []
+    for produto in catalogo:
+        if produto["categoria"].lower() == categoria_escolhida.lower():
+            encontrados.append(produto)
+
+    if not encontrados:
+        print(f"\nNenhum produto encontrado na categoria '{categoria_escolhida}'.")
+        return
+
+    print(f"\n--- {geraMensagemCategoria(categoria_escolhida)} ---")
+    for produto in encontrados:
+        print(f"[{produto['codigo']}] {produto['nome']} - R$ {produto['preco']:.2f} - Estoque: {produto['estoque']}")
+
+def menuListagem():
+    categoria_escolhida = input("\nDigite a categoria que deseja consultar: ")
+    listarPorCategoria(catalogo_produtos, categoria_escolhida)
