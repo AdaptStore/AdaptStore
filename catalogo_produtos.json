@@ -1,0 +1,9 @@
+[
+    {
+        "codigo": "TÊN001",
+        "nome": "bola",
+        "categoria": "tênis",
+        "preco": 10.0,
+        "estoque": 10
+    }
+]

@@ -157,7 +157,7 @@ def main():
                 menuEstoque()
             case 3:
                 menuListagem()
-            case 0:
+            case 4:
                 print("Saindo... até logo!")
                 break
             case _:
