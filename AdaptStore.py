@@ -1,16 +1,17 @@
 import json
-import os
 import emoji
 
 catalogo_produtos = []
 
+# Função que carrega o arquivo .json do catálogo.
 def carregarCatalogo():
-    global catalogo_produtos
-    if os.path.exists("catalogo_produtos.json"):
-        with open("catalogo_produtos.json", "r", encoding="utf-8") as arquivo:
-            catalogo_produtos = json.load(arquivo)
+    try:
+        with open("catalogo.json", "r", encoding="utf-8") as arquivo:
+            return json.load(arquivo)
+    except FileNotFoundError:
+        return []
 
-
+# Função que salva o catalogo no arquivo .json.
 def salvarCatalogo():
     with open("catalogo_produtos.json", "w", encoding="utf-8") as arquivo:
         json.dump(catalogo_produtos, arquivo, ensure_ascii=False, indent=4)
@@ -73,3 +74,36 @@ def cadastrarProduto():
 
     print(f"\nProduto cadastrado! Código: {codigo}")
     print(f"Categoria: {geraMensagemCategoria(categoria)}")
+
+# localiza o produto pelo código e ajusta o estoque
+def atualizarEstoque(catalogo, codigo, quantidade):
+    for produto in catalogo:
+        if produto["codigo"] == codigo:
+            novoEstoque = produto["estoque"] + quantidade
+            if novoEstoque < 0:
+                print("Não dá pra deixar o estoque negativo.")
+                return False
+            produto["estoque"] = novoEstoque
+            salvarCatalogo()
+            print(f"Estoque de '{produto['nome']}' atualizado para {novoEstoque} unidades.")
+            return True
+    print("Produto não encontrado.")
+    return False
+
+def menuEstoque():
+    print("\n--- Controle de Estoque ---")
+    codigo = input("Código do produto: ")
+    print("1 - Entrada de produtos")
+    print("2 - Saída de produtos")
+    tipo = input("Opção: ")
+
+    try:
+        quantidade = int(input("Quantidade: "))
+    except ValueError:
+        print("Quantidade inválida.")
+        return
+
+    if tipo == "2":
+        quantidade = -quantidade
+
+    atualizarEstoque(catalogo_produtos, codigo, quantidade)
