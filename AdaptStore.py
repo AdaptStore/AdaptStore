@@ -1,3 +1,5 @@
+import os
+os.system('cls')
 import json
 import emoji
 
@@ -30,7 +32,9 @@ def geraMensagemCategoria(categoria):
     categoria = categoria.lower()
     match categoria:
         case "futebol":
-            icone = emoji.emojisize(":soccer_ball:")
+            icone = emoji.emojize(":soccer_ball:")
+        case "basquete":
+            icone = emoji.emojize(":basketball:")
         case "vôlei" | "volei":
             icone = emoji.emojize(":volleyball:")
         case "tênis" | "tenis":
@@ -51,7 +55,7 @@ def geraMensagemCategoria(categoria):
 def cadastrarProduto():
     print("\n--- Cadastro de Produto ---")
     nome = input("Nome do produto: ")
-    categoria = input("Categoria (futebol, vôlei, tênis, escalada, paraquedismo, náuticos, mergulho): ")
+    categoria = input("Categoria (futebol, basquete, vôlei, tênis, escalada, paraquedismo, náuticos, mergulho): ")
 
     try:
         preco = float(input("Preço (ex: 99.90): "))
