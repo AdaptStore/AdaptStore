@@ -1,9 +1,163 @@
 [
     {
+        "codigo": "FUT001",
+        "nome": "Bola de Futebol de Campo",
+        "categoria": "futebol",
+        "preco": 129.9,
+        "estoque": 40
+    },
+    {
+        "codigo": "FUT002",
+        "nome": "Chuteira Society",
+        "categoria": "futebol",
+        "preco": 299.9,
+        "estoque": 20
+    },
+    {
+        "codigo": "FUT003",
+        "nome": "Luva de Goleiro",
+        "categoria": "futebol",
+        "preco": 89.9,
+        "estoque": 12
+    },
+    {
         "codigo": "BAS001",
-        "nome": "bola de basquete",
+        "nome": "Bola de Basquete Tamanho 7",
         "categoria": "basquete",
-        "preco": 15.0,
+        "preco": 159.9,
+        "estoque": 25
+    },
+    {
+        "codigo": "BAS002",
+        "nome": "Regata de Basquete",
+        "categoria": "basquete",
+        "preco": 79.9,
+        "estoque": 30
+    },
+    {
+        "codigo": "BAS003",
+        "nome": "Tabela de Basquete Portátil",
+        "categoria": "basquete",
+        "preco": 899.9,
+        "estoque": 5
+    },
+    {
+        "codigo": "VÔL001",
+        "nome": "Bola de Vôlei de Quadra",
+        "categoria": "vôlei",
+        "preco": 139.9,
+        "estoque": 30
+    },
+    {
+        "codigo": "VÔL002",
+        "nome": "Rede de Vôlei Oficial",
+        "categoria": "vôlei",
+        "preco": 189.9,
+        "estoque": 8
+    },
+    {
+        "codigo": "VÔL003",
+        "nome": "Joelheira de Vôlei",
+        "categoria": "vôlei",
+        "preco": 59.9,
+        "estoque": 20
+    },
+    {
+        "codigo": "TÊN001",
+        "nome": "Raquete de Tênis Adulto",
+        "categoria": "tênis",
+        "preco": 449.9,
+        "estoque": 10
+    },
+    {
+        "codigo": "TÊN002",
+        "nome": "Tubo com 3 Bolas de Tênis",
+        "categoria": "tênis",
+        "preco": 49.9,
+        "estoque": 60
+    },
+    {
+        "codigo": "TÊN003",
+        "nome": "Viseira de Tênis",
+        "categoria": "tênis",
+        "preco": 39.9,
+        "estoque": 25
+    },
+    {
+        "codigo": "ESC001",
+        "nome": "Sapatilha de Escalada",
+        "categoria": "escalada",
+        "preco": 349.9,
+        "estoque": 14
+    },
+    {
+        "codigo": "ESC002",
+        "nome": "Corda Dinâmica 60 m",
+        "categoria": "escalada",
+        "preco": 899.9,
+        "estoque": 6
+    },
+    {
+        "codigo": "PAR001",
+        "nome": "Capacete de Paraquedismo",
+        "categoria": "paraquedismo",
+        "preco": 1290.0,
+        "estoque": 9
+    },
+    {
+        "codigo": "PAR002",
+        "nome": "Altímetro de Pulso",
+        "categoria": "paraquedismo",
+        "preco": 699.9,
+        "estoque": 6
+    },
+    {
+        "codigo": "PAR003",
+        "nome": "Óculos de Paraquedismo",
+        "categoria": "paraquedismo",
+        "preco": 189.9,
         "estoque": 15
+    },
+    {
+        "codigo": "NÁU001",
+        "nome": "Colete Salva-Vidas",
+        "categoria": "náuticos",
+        "preco": 149.9,
+        "estoque": 35
+    },
+    {
+        "codigo": "NÁU002",
+        "nome": "Remo de Caiaque",
+        "categoria": "náuticos",
+        "preco": 219.9,
+        "estoque": 12
+    },
+    {
+        "codigo": "NÁU003",
+        "nome": "Bote Inflável para 3 Pessoas",
+        "categoria": "náuticos",
+        "preco": 1499.9,
+        "estoque": 3
+    },
+    {
+        "codigo": "MER001",
+        "nome": "Máscara de Mergulho",
+        "categoria": "mergulho",
+        "preco": 199.9,
+        "estoque": 18
+    },
+    {
+        "codigo": "MER002",
+        "nome": "Snorkel",
+        "categoria": "mergulho",
+        "preco": 79.9,
+        "estoque": 30
+    },
+    {
+        "codigo": "MER003",
+        "nome": "Nadadeiras de Mergulho",
+        "categoria": "mergulho",
+        "preco": 259.9,
+        "estoque": 14
     }
 ]

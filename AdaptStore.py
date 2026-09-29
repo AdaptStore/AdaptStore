@@ -8,7 +8,7 @@ catalogo_produtos = []
 # Função que carrega o arquivo .json do catálogo.
 def carregarCatalogo():
     try:
-        with open("catalogo.json", "r", encoding="utf-8") as arquivo:
+        with open("catalogo_produtos.json", "r", encoding="utf-8") as arquivo:
             return json.load(arquivo)
     except FileNotFoundError:
         return []
@@ -145,7 +145,8 @@ def exibirMenu():
     print("=======================")
 
 def main():
-    carregarCatalogo()
+    global catalogo_produtos
+    catalogo_produtos = carregarCatalogo()
     while True:
         exibirMenu()
         try:
